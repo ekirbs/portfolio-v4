@@ -26,11 +26,11 @@ export default function App() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div className ="base">
+    <>
       <Header />
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
       <Footer />
-    </div>
+    </>
   );
 }

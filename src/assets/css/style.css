@@ -27,17 +27,18 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  /* font-family: 'Raleway', sans-serif; */
 }
 
-.base {
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
   background: url(../images/black-space.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 
 ::-webkit-scrollbar {
