@@ -1,10 +1,10 @@
 {
-  "name": "portfolio-v3",
+  "name": "portfolio-v4",
   "author": "Eric Kirberger",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "The portfolio of Eric Kirberger || Full Stack Web Developer.",
   "license": "MIT",
-  "homepage": "https://ekirbs.github.io/portfolio-v3",
+  "homepage": "https://ekirbs.github.io/portfolio-v4",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -24,6 +24,7 @@
     "react-icons": "^4.7.1",
     "react-scripts": "5.0.1",
     "react-spring": "^9.6.1",
+    "react-touch-drag-slider": "^2.2.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
