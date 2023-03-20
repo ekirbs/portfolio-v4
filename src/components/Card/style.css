@@ -1,0 +1,17 @@
+.cardCard {
+  margin: 2em;
+  background: #e8eaf6;
+}
+
+.cardHeading {
+  background: #3f51b5;
+  min-height: 4em;
+  line-height: .5em;
+  font-size: 1.2rem;
+  color: var(--white);
+  padding: 2em;
+}
+
+.cardContent {
+  padding: 2em;
+}

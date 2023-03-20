@@ -1,0 +1,73 @@
+.resume-card {
+  margin: 5vw;
+  background: var(--white);
+  border-radius: 4vh;
+  padding-bottom: 2em;
+  box-shadow: 2px 2px 4px var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-card-heading {
+  background: var(--turq);
+  min-height: 10vh;
+  font-size: 5vh;
+  color: var(--highdark);
+  padding: 2vw;
+  border-radius: 4vh 4vh 0 0;
+  border: 2px solid var(--highdark);
+  text-shadow: 2px 2px 4px var(--white);
+}
+
+.resume-top-content {
+  padding: 2vw;
+  margin: 1vw 5vw;
+  display: flex;
+}
+
+.resume-img {
+  height: 20vh;
+  width: auto;
+  opacity: 75%;
+  transition: transform 0.2s;
+}
+
+.resume-img:hover {
+  opacity: 100%;
+  transform: scale(1.1);
+}
+
+.resume-section-card {
+  border: 2px solid var(--highdark);
+  margin: 1vw 5vw;
+  padding: 2vw;
+  border-radius: 2vh;
+  box-shadow: 2px 2px 4px var(--black);
+  display: flex;
+}
+
+.resume-download-card {
+  border: 2px solid var(--cydark);
+  padding: 5vw;
+  border-radius: 2vh;
+  box-shadow: 2px 2px 4px var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .resume-top-content {
+    flex-direction: column;
+  }
+
+  .resume-card-heading {
+    text-align: center;
+  }
+}
+
+.resume-title {
+  text-decoration: underline;
+}

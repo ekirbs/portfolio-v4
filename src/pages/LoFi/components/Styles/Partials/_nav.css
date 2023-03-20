@@ -1,0 +1,29 @@
+.lofiNav {
+  margin: auto;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+}
+
+.lofiNavBtn {
+  background: transparent;
+  border: 2px solid var(--highdark);
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  /* color: #FFFDD0; */
+}
+
+/* .lofiNavBtn:hover {
+  background: red;
+  color: white;
+} */
+
+.icon {
+  margin-right: 0.5rem;
+  color: var(--highlight);
+}

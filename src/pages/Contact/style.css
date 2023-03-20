@@ -1,0 +1,107 @@
+.contactCard {
+  margin: 2em;
+  background: var(--white);
+  border-radius: 4vh;
+  padding-bottom: 2em;
+  box-shadow: 2px 2px 4px var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+/* .contactCard img {
+  max-width: auto;
+  max-height: 10em;
+  border: .25em solid var(--black);
+  border-radius: 2em;
+} */
+
+.contact-card-heading {
+  background: var(--turq);
+  min-height: 10vh;
+  font-size: 5vh;
+  color: var(--highdark);
+  padding: 2vw;
+  border-radius: 4vh 4vh 0 0;
+  border: 2px solid var(--highdark);
+  text-shadow: 2px 2px 4px var(--white);
+}
+
+.contactCardGreeting {
+  padding: 2vh;
+  display: flex;
+  justify-content: center;
+  color: var(--dark);
+}
+
+.contactForm {
+  /* margin: 2em; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactForm input,
+.contactForm textarea {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: .05em solid var(--black);
+  border-radius: .5em;
+  text-align: center;
+  box-shadow: .25em .25em .5em var(--black);
+  width: 50%;
+}
+
+.contactForm button {
+  border: .05em solid var(--black);
+  box-shadow: .25em .25em .5em var(--black);
+  transition: transform 0.2s;
+  background-color: var(--highmid);
+}
+
+.contactForm button:hover {
+  box-shadow: .275em .275em .55em var(--black);
+  transform: scale(1.1);
+  background-color: var(--highdark);
+}
+
+.contactArea {
+  background-color: var(--cylight);
+  color: var(--dark);
+}
+
+.contactNameArea,
+.contactEmailArea {
+  height: 5vh;
+}
+
+.contactTextArea {
+  height: 20vh;
+}
+
+.error-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-text {
+  color: var(--error);
+}
+
+.contactInfoContainer {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
+.contactCardContent {
+  padding: 2vh;
+  color: var(--secondary);
+}
+
+@media screen and (max-width: 700px) {
+  .contact-card-heading {
+    text-align: center;
+  }
+}

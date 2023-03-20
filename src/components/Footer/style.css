@@ -1,0 +1,35 @@
+.footer {
+  background: var(--turq);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 2px solid var(--highdark);
+}
+
+.footer a img {
+  height: 5vh;
+  width: 5vh;
+  border-radius: 10%;
+  margin-right: .75em;
+}
+
+.footer a {
+  margin: 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.footer a:hover {
+  color: var(--highmid);
+}
+
+.footerZoom {
+  transition: transform 0.2s;
+  box-shadow: 1px 1px 2px var(--black);
+}
+
+.footerZoom:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 4px var(--black);
+}
