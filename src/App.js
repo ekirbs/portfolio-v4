@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Header, Navbar, Footer } from "./components";
+import { Navbar, Footer } from "./components";
 import { Home, Portfolio, Resume, LoFi, Contact } from './pages'
 
 import "./assets/css/style.css";
@@ -27,7 +27,6 @@ export default function App() {
 
   return (
     <>
-      <Header />
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
       <Footer />

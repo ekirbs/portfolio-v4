@@ -39,6 +39,7 @@ body {
   background-size: cover;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
+  /* font not working */
 }
 
 ::-webkit-scrollbar {

@@ -27,8 +27,8 @@ export default function Portfolio() {
 
   return (
     <>
-      <div className="portfolio-row">
-        <Col xs={12} sm={10} md={9} className="portfolio-col">
+      {/* <div className="portfolio-row">
+        <Col xs={12} sm={10} md={9} className="portfolio-col"> */}
           <div className="portfolio-card">
             <h1 className="portfolio-card-heading">My Portfolio</h1>
             <div className="portfolioCardContent">
@@ -71,8 +71,8 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
-        </Col>
-      </div>
+        {/* </Col>
+      </div> */}
     </>
   );
 }

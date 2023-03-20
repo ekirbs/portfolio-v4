@@ -1,46 +1,28 @@
-.navCard {
+.nav-card {
   background: var(--white);
   border-top: 2px solid var(--highdark);
   border-bottom: 2px solid var(--highdark);
   box-shadow: 2px 0 4px var(--white);
-  height: 5vh;
+  height: auto;
   display: flex;
   align-items: center;
 }
 
-.navHeading {
-  min-height: 4em;
-  line-height: 1em;
-  font-size: 1.2rem;
-  color: var(--tertiary);
-  padding: 0 2em;
+.header-title {
+  display: flex;
+  align-items: center;
 }
 
-.navHeader a:hover {
-  opacity: 100%;
+.header-title img {
+  width: 10vh;
+  height: 10vh;
+  margin-right: 2vw;
 }
 
-.navHeader {
-  transition: transform 0.2s;
-  transition: background-color 1s ease-out 100ms;
+.header-title h1 {
+   font-size: small;
 }
 
-.navHeader a:hover {
-  transform: scale(1.025);
-}
-
-.navHeader active {
-  color: var(--black);
-  background: var(--tertiary);
-}
-
-.navHeader a {
-  color: var(--secondary);
-}
-
-.navHeader a:hover {
-  color: var(--highmid);
-}
 
 .nav-link {
   color: var(--tertiary);
