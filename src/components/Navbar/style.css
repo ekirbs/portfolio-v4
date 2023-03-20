@@ -1,6 +1,5 @@
 .nav-card {
   background: var(--white);
-  border-top: 2px solid var(--highdark);
   border-bottom: 2px solid var(--highdark);
   box-shadow: 2px 0 4px var(--white);
   height: auto;
@@ -8,21 +7,45 @@
   align-items: center;
 }
 
+.nav-container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  --bs-gutter-x: 5vw;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* .navbar-toggler {
+  height: 7.5vh;
+  width: 7.5vw;
+} */
+
 .header-title {
   display: flex;
   align-items: center;
 }
 
 .header-title img {
-  width: 10vh;
-  height: 10vh;
+  width: 5vw;
+  height: 5vw;
   margin-right: 2vw;
 }
 
-.header-title h1 {
+.header-title h2 {
    font-size: small;
+   margin-bottom: 0;
 }
 
+
+.nav-list a {
+  font-size: small;
+}
 
 .nav-link {
   color: var(--tertiary);

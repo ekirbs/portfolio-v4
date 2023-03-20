@@ -1,0 +1,1 @@
+export { default as robotHead } from "./robot-head.png"
