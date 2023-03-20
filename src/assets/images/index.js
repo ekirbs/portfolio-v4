@@ -1,0 +1,1 @@
+export { default as blackSpace } from "./black-space.png";
