@@ -1,10 +1,10 @@
-.portfolio-row {
+/* .portfolio-row {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 80vh;
-}
+} */
 
 .portfolio-card {
   margin: 2em;
@@ -24,14 +24,15 @@
   border-radius: 4vh 4vh 0 0;
   border: 2px solid var(--highdark);
   text-shadow: 2px 2px 4px var(--white);
+  text-align: center;
 }
 
-.portfolioCardContent {
+.portfolio-card-content {
   height: 30em;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2em;
+  /* margin: 2em; */
 }
 
 .slider-container {
@@ -45,13 +46,14 @@
 .slider-button {
   font-size: 2rem;
   z-index: 10;
-  position: relative;
+  position: fixed;
   top: 50%;
 
 }
 
 .slider-button-left {
   left: .5rem;
+  background-color: var(--turq);
 }
 
 .slider-button-right {

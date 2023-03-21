@@ -31,7 +31,7 @@ export default function Portfolio() {
         <Col xs={12} sm={10} md={9} className="portfolio-col"> */}
           <div className="portfolio-card">
             <h1 className="portfolio-card-heading">My Portfolio</h1>
-            <div className="portfolioCardContent">
+            <div className="portfolio-card-content">
               <div className="slider-container">
                 <Button
                   onClick={previous}
