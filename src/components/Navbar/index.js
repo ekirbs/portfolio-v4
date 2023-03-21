@@ -13,14 +13,18 @@ const NavComponent = ({ currentPage, handlePageChange }) => { // this is doublin
         <Navbar.Brand
           href="#home"
           onClick={() => handlePageChange('Home')}
-          className={currentPage === 'Home' ? 'header-title active' : 'header-title'}
-          // className="header-title"
+          // className={currentPage === 'Home' ? 'header-title active' : 'header-title'}
+          className="header-title"
         >
           <img 
             src={robotHead}
             alt="A robot's head."
           />{' '}
-          <h2>Eric Kirberger || Web Developer</h2>
+          <h2 className="title">
+            <span className="title-first-line">Eric Kirberger </span>
+            <br></br>
+            <span className="title-second-line">Web Developer</span>
+          </h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
