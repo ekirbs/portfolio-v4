@@ -1,4 +1,4 @@
-.loFi-card {
+.lofi-card {
   margin: 2vw 5vw;
   background: var(--white);
   border-radius: 4vh;
@@ -6,7 +6,6 @@
   box-shadow: 2px 2px 4px var(--black);
   display: flex;
   flex-direction: column;
-
 }
 
 .lofi-card-heading {
@@ -49,7 +48,7 @@
 /*generated with Input range slider CSS style generator (version 20201227)
 https://toughengineer.github.io/demo/slider-styler*/
 
-.LoFi {
+.lofi {
   margin-top: 1rem;
 }
 input[type="range"].styled-slider {
@@ -173,5 +172,11 @@ input[type="range"].styled-slider.slider-progress:active::-moz-range-track {
 @media screen and (max-width: 700px) {
   .lofi-card-heading {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .lofi {
+    margin-top: 1vh;
   }
 }

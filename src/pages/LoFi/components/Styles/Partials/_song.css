@@ -64,3 +64,10 @@
     width: 55vw;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .song-container {
+    min-height: 40vh;
+    margin-top: 2vh;
+  }
+}

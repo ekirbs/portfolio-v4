@@ -16,9 +16,9 @@ export default function LoFi() {
   const [librarystatus, setLibrarystatus] = useState(false);
 
   return (
-    <div className="loFi-card">
+    <div className="lofi-card">
       <h1 className="lofi-card-heading">Music Player</h1>
-      <div className="LoFi">
+      <div className="lofi">
         {/* <Landing /> */}
         <Nav librarystatus={librarystatus} setLibrarystatus={setLibrarystatus} />
         <main className="main-container">
