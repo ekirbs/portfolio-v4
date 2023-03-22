@@ -1,9 +1,9 @@
-.homeCard {
-  height: 75vh;
+.home-card {
+  height: 76vh;
   /* display: flex; */
 }
 
-.homeCardContent {
+.home-card-content {
   color: var(--white);
   padding-top: 2vh;
   font-size: 125%;
@@ -29,7 +29,11 @@
   box-shadow: 3vh 3vh 6vh var(--black);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+  .home-card {
+    height: 78.5vh;
+  }
+
   .contact-link {
     height: 30vw;
     width: 30vw;

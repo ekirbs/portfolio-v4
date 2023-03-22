@@ -1,12 +1,12 @@
 .nav-card {
-  background: var(--white);
+  background: var(--dark);
   border-bottom: 2px solid var(--highdark);
   box-shadow: 2px 0 4px var(--white);
-  /* height: 10vh; */
   display: flex;
   align-items: center;
-
+  
   --bs-navbar-padding-y: 0 !important;
+  /* height: 10vh; */
 }
 
 .nav-container {
@@ -61,10 +61,19 @@
     font-size: 1.5em;
     margin-bottom: 0.5em;
   } */
+
+  .navbar-toggler {
+    margin-right: 1vw;
+    height: 6vh;
+  }
 }
 
 @media screen and (min-width: 500px) {
   .navbar-toggler {
     font-size: 5vh !important;
   }
+}
+
+.dropdown-menu {
+  --bs-dropdown-bg: var(--black) !important;
 }

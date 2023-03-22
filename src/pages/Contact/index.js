@@ -25,13 +25,13 @@ export default function Contact() {
   }
 
   return (
-    <div className="contactCard">
+    <div className="contact-card">
       <h1 className="contact-card-heading">Contact Me</h1>
-      <div className ="contactContainer">
-        <h3 className="contactCardGreeting">erickirberger@gmail.com</h3>
+      <div className ="contact-container">
+        <h3 className="contact-card-greeting">erickirberger@gmail.com</h3>
       </div>
-      <div className="contactInfoContainer">
-        <p className="contactCardContent">
+      <div className="contact-info-container">
+        <p className="contact-card-content">
           Send me a message and I'll get back to you as soon as I can.
         </p>
       </div>

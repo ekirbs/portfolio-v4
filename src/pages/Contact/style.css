@@ -1,4 +1,4 @@
-.contactCard {
+.contact-card {
   margin: 2em;
   background: var(--white);
   border-radius: 4vh;
@@ -6,6 +6,7 @@
   box-shadow: 2px 2px 4px var(--black);
   display: flex;
   flex-direction: column;
+  height: 70vh;
 }
 
 /* .contactCard img {
@@ -26,7 +27,7 @@
   text-shadow: 2px 2px 4px var(--white);
 }
 
-.contactCardGreeting {
+.contact-card-greeting {
   padding: 2vh;
   display: flex;
   justify-content: center;
@@ -89,13 +90,13 @@
   color: var(--error);
 }
 
-.contactInfoContainer {
+.contact-info-container {
   display: flex;
   justify-content: center;
   padding: 5%;
 }
 
-.contactCardContent {
+.contact-card-content {
   padding: 2vh;
   color: var(--secondary);
 }

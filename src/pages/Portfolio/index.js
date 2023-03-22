@@ -10,7 +10,7 @@ import "./style.css";
 export default function Portfolio() {
   // state should start with the index you want to start the slide on
 
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(0);
 
   const setFinishedIndex = (i) => {
     console.log("finished dragging on slide", i);
@@ -31,13 +31,14 @@ export default function Portfolio() {
         <Col xs={12} sm={10} md={9} className="portfolio-col"> */}
           <div className="portfolio-card">
             <h1 className="portfolio-card-heading">My Portfolio</h1>
-            <div className="portfolio-card-content">
+            <Container className="portfolio-card-content">
               <div className="slider-container">
                 <Button
                   onClick={previous}
                   left
                   disabled={index === 0}
-                  className="slider-button slider-button-left"
+                  className="slider-button slider-button-left bg-dark"
+                  
                 >
                   〈
                 </Button>
@@ -45,7 +46,7 @@ export default function Portfolio() {
                   onClick={next}
                   right
                   disabled={index === projects.length - 1}
-                  className="slider-button slider-button-right"
+                  className="slider-button slider-button-right bg-dark"
                 >
                   〉
                 </Button>
@@ -61,15 +62,15 @@ export default function Portfolio() {
                   scaleOnDrag={true}
                 >
                   {projects.map(({ url, title, description }, index) => (
-                    <Container>
+                    <div className="project-container">
                       <h3>{title}</h3>
                       <img src={url} key={index} alt={title} />
                       <p>{description}</p>
-                    </Container>
+                    </div>
                   ))}
                 </Slider>
               </div>
-            </div>
+            </Container>
           </div>
         {/* </Col>
       </div> */}

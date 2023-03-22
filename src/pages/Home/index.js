@@ -7,11 +7,11 @@ import "./style.css";
 export default function About({ handlePageChange }) {
   return (
     <>
-      <Container className="homeCard">
+      <Container className="home-card">
         <Row>
           <Col xs={0} md={6}></Col>
           <Col xs={12} md={6}>
-            <p className="homeCardContent">Hi. My name is Eric Kirberger and I am a Full Stack Web Developer interested in designing and building responsive web applications with intuitive user experiences. Please enjoy my website!</p>
+            <p className="home-card-content">Hi. My name is Eric Kirberger and I am a Full Stack Web Developer interested in designing and building responsive web applications with intuitive user experiences. Please enjoy my website!</p>
           </Col>
         </Row>
         <Row>

@@ -46,7 +46,7 @@ const NavComponent = ({ currentPage, handlePageChange }) => { // this is doublin
             <NavDropdown
               title="Fun Stuff"
               id="collasible-nav-dropdown"
-              className="nav-list"
+              className="nav-list bg-dark"
             >
               <NavDropdown.Item>
                 <Nav.Link
