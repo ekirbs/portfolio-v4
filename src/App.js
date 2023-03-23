@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Navbar, Footer } from "./components";
-import { Home, Portfolio, Resume, LoFi, Contact } from './pages'
+import { Home, Portfolio, Resume, LoFi, Weather, Contact } from './pages'
 
 import "./assets/css/style.css";
 
@@ -19,6 +19,9 @@ export default function App() {
     }
     if (currentPage === 'LoFi') {
       return <LoFi />;
+    }
+    if (currentPage === 'Weather') {
+      return <Weather />;
     }
     return <Contact />;
   };

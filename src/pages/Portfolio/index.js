@@ -61,11 +61,12 @@ export default function Portfolio() {
                   transition={0.2}
                   scaleOnDrag={true}
                 >
-                  {projects.map(({ url, title, description }, index) => (
+                  {projects.map(({ pic, title, description, url }, index) => (
                     <div className="project-container">
                       <h3>{title}</h3>
-                      <img src={url} key={index} alt={title} />
+                      <img src={pic} key={index} alt={title} />
                       <p>{description}</p>
+                      <a href={url} target="_blank" rel="noreferrer"><h4>Visit Site!</h4></a>
                     </div>
                   ))}
                 </Slider>

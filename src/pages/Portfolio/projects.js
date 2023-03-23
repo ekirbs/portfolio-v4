@@ -4,7 +4,8 @@ import { dailySchedulePlanner, theBigQuiz, natParkTravelGuide, randomPasswordGen
 const Projects = [
   {
     "title": "Task Sandwich",
-    "url": taskSandwich,
+    "pic": taskSandwich,
+    "url": "https://task-sandwich.herokuapp.com",
     "description": "A MERN task-management system with built in rewards system.",
     "technologies": [
       "HTML",
@@ -14,7 +15,8 @@ const Projects = [
   },
   {
     "title": "Boston Street Cuisine",
-    "url": bostonStreetCuisine,
+    "pic": bostonStreetCuisine,
+    "url": "https://boston-street-cuisine-app.herokuapp.com/",
     "description": "An App to find location and information about street vendors in Boston.",
     "technologies": [
       "HTML",
@@ -24,7 +26,8 @@ const Projects = [
   },
   {
     "title": "Daily Schedule Planner",
-    "url": dailySchedulePlanner,
+    "pic": dailySchedulePlanner,
+    "url": "https://ekirbs.github.io/daily-schedule-planner/",
     "description": "A Daily Schedule Planner to allows the saving, organization, and deletion of daily activities.",
     "technologies": [
       "HTML",
@@ -34,7 +37,8 @@ const Projects = [
   },
   {
     "title": "The BIG Quiz",
-    "url": theBigQuiz,
+    "pic": theBigQuiz,
+    "url": "https://ekirbs.github.io/the-big-quiz/",
     "description": "The BIG Quiz.  A timed quiz that stores and displays high scores.",
     "technologies": [
       "HTML",
@@ -44,7 +48,8 @@ const Projects = [
   },
   {
     "title": "Nat Park Travel Guide",
-    "url": natParkTravelGuide,
+    "pic": natParkTravelGuide,
+    "url": "https://ekirbs.github.io/national-park-travelers-guide/",
     "description": "A Traveler's Guide to all National Parks in Northeast USA.",
     "technologies": [
       "HTML",
@@ -54,7 +59,8 @@ const Projects = [
   },
   {
     "title": "Password Generator",
-    "url": randomPasswordGenerator,
+    "pic": randomPasswordGenerator,
+    "url": "https://ekirbs.github.io/random-password-generator/",
     "description": "A Random Password Generator to provide secure passwords locally.",
     "technologies": [
       "HTML",
@@ -64,7 +70,8 @@ const Projects = [
   },
   {
     "title": "Weather Forecast",
-    "url": weatherForecast,
+    "pic": weatherForecast,
+    "url": "https://ekirbs.github.io/weather-forecast-finder/",
     "description": "A Weather Forecast search function using the OpenWeatherMapAPI.",
     "technologies": [
       "MongoDB",

@@ -61,16 +61,30 @@
   right: .5rem;
 }
 
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.project-container img {
+  height: 100%;
+  width: 100%;
+}
+
 @media screen and (max-width: 500px) {
   .portfolio-card {
     height: 74vh;
   }
 }
 
-@media screen and (min-width: 300px) {
-  .project-container h3 {
+/* @media screen and (min-width: 300px) {
+  .project-container h3 { */
     /* height: 5vh; */
-    font-size: medium;
+    /* font-size: medium;
   }
   .project-container img {
     height: 25vh;
@@ -78,15 +92,15 @@
   }
 
   .project-container p {
-    font-size: x-small;
+    font-size: x-small; */
     /* height: 5vh; */
-  }
+  /* } */
 
-  .project-container {
+  /* .project-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 50vh;
-  }
-}
+  } */
+/* } */

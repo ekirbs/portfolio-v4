@@ -63,6 +63,16 @@ const NavComponent = ({ currentPage, handlePageChange }) => { // this is doublin
                 </Nav.Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
+              <NavDropdown.Item>
+                <Nav.Link
+                  href="#weather"
+                  onClick={() => handlePageChange('Weather')}
+                  className={currentPage === 'Weather' ? 'nav-link active' : 'nav-link'}
+                >
+                  Weather Forecast
+                </Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
               <NavDropdown.Item href="#">
                 placeholder
               </NavDropdown.Item>
