@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: space-around;
   border-top: 2px solid var(--highdark);
+  /* position:relative;
+  bottom: -2px;
+  width: 100vw; */
 }
 
 .footer a img {
@@ -32,4 +35,10 @@
 .footerZoom:hover {
   transform: scale(1.1);
   box-shadow: 2px 2px 4px var(--black);
+}
+
+@media screen and (max-width: 500px) {
+  .footer-text {
+    display: none;
+  }
 }

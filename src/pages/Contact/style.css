@@ -32,6 +32,7 @@
   display: flex;
   justify-content: center;
   color: var(--dark);
+  font-size: medium;
 }
 
 .contactForm {
@@ -99,6 +100,7 @@
 .contact-card-content {
   padding: 2vh;
   color: var(--secondary);
+  font-size: smaller;
 }
 
 @media screen and (max-width: 700px) {

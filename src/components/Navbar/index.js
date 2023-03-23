@@ -8,7 +8,12 @@ import "./style.css";
 
 const NavComponent = ({ currentPage, handlePageChange }) => { // this is doubling up on links, I have both a manual system and bootstrap links in place.
   return (
-    <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark" className="nav-card">
+    <Navbar
+      collapseOnSelect
+      expand="sm"
+      sticky="top"
+      className="nav-card"
+    >
       <div className="nav-container">
         <Navbar.Brand
           href="#home"
@@ -46,7 +51,7 @@ const NavComponent = ({ currentPage, handlePageChange }) => { // this is doublin
             <NavDropdown
               title="Fun Stuff"
               id="collasible-nav-dropdown"
-              className="nav-list bg-dark"
+              className="nav-list"
             >
               <NavDropdown.Item>
                 <Nav.Link

@@ -1,12 +1,12 @@
 .nav-card {
-  background: var(--dark);
+  background: var(--turq);
   border-bottom: 2px solid var(--highdark);
-  box-shadow: 2px 0 4px var(--white);
+  box-shadow: 1px 1px 4px var(--white);
   display: flex;
   align-items: center;
   
   --bs-navbar-padding-y: 0 !important;
-  /* height: 10vh; */
+  height: auto;
 }
 
 .nav-container {
@@ -33,7 +33,7 @@
   height: 10vh;
   margin: 0 4vw 0 0;
   border-radius: 2px;
-  border: 2px solid var(--turq);
+  border: 2px solid var(--highdark);
 }
 
 .header-title h2 {
@@ -75,5 +75,5 @@
 }
 
 .dropdown-menu {
-  --bs-dropdown-bg: var(--black) !important;
+  --bs-dropdown-bg: var(--turq) !important;
 }
