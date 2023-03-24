@@ -82,6 +82,10 @@ export default function Weather() {
     return <ul className='weather-box-list'>{weatherBoxes}</ul>;
   };
 
+  // const style = {
+  //   height: this.props.city ? '125vh' : '80vh',
+  // }
+
   return (
     <>
       <div className="weather-card">

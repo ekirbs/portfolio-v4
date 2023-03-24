@@ -3,7 +3,7 @@ import './CityInput.css';
 
 export default class CityInput extends React.Component {
   render(props) {
-    const onKlickHandler = async e => {
+    const onClickHandler = async e => {
       e.persist();
       const eventKey = e.which ? e.which : e.keyCode;
       const city = e.target.value;
@@ -22,7 +22,8 @@ export default class CityInput extends React.Component {
     };
 
     const style = {
-      top: this.props.city ? '-380px' : '-20px',
+      top: this.props.city ? '-25vh' : '10vh',
+      // top: this.props.city ? '-380px' : '-20px',
       width: '80vw',
       // width: '600px',
       display: 'inline-block',
@@ -41,7 +42,7 @@ export default class CityInput extends React.Component {
         style={style}
         type='text'
         placeholder='Enter a City...'
-        onKeyPress={onKlickHandler}
+        onKeyPress={onClickHandler}
       />
     );
   }
