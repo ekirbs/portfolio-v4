@@ -1,5 +1,6 @@
 .weather-card {
   height: 80vh;
+  /* width: 85vw; */
 }
 
 .weather-card-content {
@@ -15,7 +16,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;

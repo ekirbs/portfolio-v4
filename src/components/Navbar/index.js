@@ -74,7 +74,7 @@ const NavComponent = ({ currentPage, handlePageChange }) => { // this is doublin
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#">
-                placeholder
+                more to come...
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

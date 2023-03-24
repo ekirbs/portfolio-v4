@@ -3,6 +3,7 @@ import axios from "axios";
 // import dotenv from "dotenv";
 // dotenv.config();
 
+import { Container } from "react-bootstrap";
 import MainWeatherWindow from './components/MainWeatherWindow';
 import CityInput from './components/CityInput';
 import WeatherBox from './components/WeatherBox';
@@ -82,13 +83,17 @@ export default function Weather() {
   };
 
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <MainWeatherWindow data={days[0]} city={city}>
-          <CityInput city={city} makeApiCall={makeApiCall} />
-          <WeatherBoxes />
-        </MainWeatherWindow>
-      </header>
-    </div>
+    <>
+      <div className="weather-card">
+        <div className='App'>
+          <header className='App-header'>
+            <MainWeatherWindow data={days[0]} city={city}>
+              <CityInput city={city} makeApiCall={makeApiCall} />
+              <WeatherBoxes />
+            </MainWeatherWindow>
+          </header>
+        </div>
+      </div>
+    </>
   );
 }
