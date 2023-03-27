@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio-v4/static/css/main.f8e221b0.css",
+    "main.js": "/portfolio-v4/static/js/main.764675bb.js",
+    "static/media/placeholder.gif": "/portfolio-v4/static/media/placeholder.9e391c980529adf7f5ee.gif",
+    "static/media/black-space.png": "/portfolio-v4/static/media/black-space.89a6c0f166f9558bb6ae.png",
+    "static/media/nat-park-travel-guide-screenshot.png": "/portfolio-v4/static/media/nat-park-travel-guide-screenshot.9635b15ca033496dfbba.png",
+    "static/media/task-sandwich.png": "/portfolio-v4/static/media/task-sandwich.815f6e536d60eafca282.png",
+    "static/media/thinkingRobot.jpg": "/portfolio-v4/static/media/thinkingRobot.dfc9b8a7381c9ca6fdbf.jpg",
+    "static/media/boston-street-cuisine.png": "/portfolio-v4/static/media/boston-street-cuisine.3706496330d2d8e6efa0.png",
+    "static/media/instagram-logo.png": "/portfolio-v4/static/media/instagram-logo.59548a0198d107581f3e.png",
+    "static/media/resume.pdf": "/portfolio-v4/static/media/resume.0f2d4bafb5bf575c7f4e.pdf",
+    "static/media/background.jpg": "/portfolio-v4/static/media/background.a42ba6f1c03ec5ce3ba7.jpg",
+    "static/media/weather-forecast-screenshot.png": "/portfolio-v4/static/media/weather-forecast-screenshot.406c388bf31e565f9ce6.png",
+    "static/media/resume-img.webp": "/portfolio-v4/static/media/resume-img.e4c5c34e1292e64e4fdb.webp",
+    "static/media/daily-sched-screenshot.png": "/portfolio-v4/static/media/daily-sched-screenshot.6528d637459297ebd820.png",
+    "static/media/robot-head.png": "/portfolio-v4/static/media/robot-head.3b9617ca650427f630ed.png",
+    "static/media/big-quiz-screenshot.png": "/portfolio-v4/static/media/big-quiz-screenshot.0e8e631a9a86cc614200.png",
+    "static/media/github-logo.jpg": "/portfolio-v4/static/media/github-logo.fabbe3c10b110b54f815.jpg",
+    "static/media/random-password-generator-screenshot.png": "/portfolio-v4/static/media/random-password-generator-screenshot.772b327e01b07437a038.png",
+    "static/media/lofi-img.webp": "/portfolio-v4/static/media/lofi-img.4b77484ad782033bfddf.webp",
+    "static/media/linkedin-logo.jpg": "/portfolio-v4/static/media/linkedin-logo.d85c32d23d11237ea004.jpg",
+    "index.html": "/portfolio-v4/index.html",
+    "main.f8e221b0.css.map": "/portfolio-v4/static/css/main.f8e221b0.css.map",
+    "main.764675bb.js.map": "/portfolio-v4/static/js/main.764675bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8e221b0.css",
+    "static/js/main.764675bb.js"
+  ]
+}

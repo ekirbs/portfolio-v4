@@ -1,6 +1,4 @@
-# **eKirb's Portfolio**
-
-<br>
+![](./public/assets/images/ekirbs-portfolio-banner.png)
 
 ---
 >## Description
