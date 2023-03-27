@@ -1,7 +1,7 @@
-.weather-card {
-  height: 125vh;
-  /* width: 85vw; */
-}
+/* .weather-card {
+  height: 225vh;
+  width: 85vw;
+} */
 
 .weather-card-content {
   color: var(--white);
@@ -16,7 +16,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  min-height: 125vh;
+  min-height: 80vh;
+  /* height: calc(80vh + (35vh * var(--is-city-selected))); */
+  /* min-height: 120vh; */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -10,7 +10,7 @@ const NavComponent = ({ currentPage, handlePageChange }) => { // this is doublin
   return (
     <Navbar
       collapseOnSelect
-      expand="sm"
+      expand="lg"
       sticky="top"
       className="nav-card"
     >

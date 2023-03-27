@@ -6,7 +6,12 @@ export default class MainWeatherWindow extends React.Component {
     const Title = this.props.city ? null : <h1 className='weather-title'>Weather Forecast</h1>;
 
     return (
-      <div className='weather-main'>
+      <div
+        style={{
+          height: this.props.city ? '105vh' : '75vh',
+        }}
+        className='weather-main'
+      >
         <div className='inner-main'>
           {Title}
           <img

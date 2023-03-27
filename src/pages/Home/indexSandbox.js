@@ -27,7 +27,7 @@ export default function About({ handlePageChange }) {
     <>
       <Container className="home-card">
         <div>
-          <p>{paragraph}</p>
+          <p className="weather-card-content">{paragraph}</p>
           <button onClick={handleButtonClick} disabled={isDeleting}>
             Delete letters
           </button>

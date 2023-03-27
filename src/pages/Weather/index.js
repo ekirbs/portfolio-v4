@@ -83,14 +83,17 @@ export default function Weather() {
   };
 
   // const style = {
-  //   height: this.props.city ? '125vh' : '80vh',
+  //   height: this.props.city ? '120vh' : '80vh',
   // }
 
   return (
     <>
       <div className="weather-card">
         <div className='App'>
-          <header className='App-header'>
+          <header
+            // style={style}
+            className='App-header'
+          >
             <MainWeatherWindow data={days[0]} city={city}>
               <CityInput city={city} makeApiCall={makeApiCall} />
               <WeatherBoxes />

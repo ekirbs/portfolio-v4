@@ -6,7 +6,7 @@ const Projects = [
     "title": "Task Sandwich",
     "pic": taskSandwich,
     "url": "https://task-sandwich.herokuapp.com",
-    "description": "A MERN task-management system with built in rewards system.",
+    "description": "A task-management system with built in rewards system.",
     "technologies": [
       "HTML",
       "CSS",
@@ -17,7 +17,7 @@ const Projects = [
     "title": "Boston Street Cuisine",
     "pic": bostonStreetCuisine,
     "url": "https://boston-street-cuisine-app.herokuapp.com/",
-    "description": "An App to find location and information about street vendors in Boston.",
+    "description": "Locate street food vendors in Boston. Find out information about them and discuss with other users.",
     "technologies": [
       "HTML",
       "CSS",
@@ -61,7 +61,7 @@ const Projects = [
     "title": "Password Generator",
     "pic": randomPasswordGenerator,
     "url": "https://ekirbs.github.io/random-password-generator/",
-    "description": "A Random Password Generator to provide secure passwords locally.",
+    "description": "A Random Password Generator to provide secure passwords privately.",
     "technologies": [
       "HTML",
       "CSS",

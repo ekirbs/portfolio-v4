@@ -22,7 +22,7 @@ export default class CityInput extends React.Component {
     };
 
     const style = {
-      top: this.props.city ? '-25vh' : '10vh',
+      top: this.props.city ? '-25vh' : '15vh',
       // top: this.props.city ? '-380px' : '-20px',
       width: '80vw',
       // width: '600px',
