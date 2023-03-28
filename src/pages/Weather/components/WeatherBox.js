@@ -28,7 +28,8 @@ export default class WeatherBox extends React.Component {
           }
           alt='sun'
         />
-        <span className='temp'>{Math.round(this.props.temp - 273.15)}°C</span>
+        <span className='temp'>{Math.round(this.props.temp)}°F</span>
+        {/* <span className='temp'>{Math.round(this.props.temp - 273.15)}°C</span> */}
       </div>
     );
   }

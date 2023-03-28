@@ -26,7 +26,10 @@ export default function Weather() {
         date: data.list[dayIndices[i]].dt_txt,
         weather_desc: data.list[dayIndices[i]].weather[0].description,
         icon: data.list[dayIndices[i]].weather[0].icon,
-        temp: data.list[dayIndices[i]].main.temp
+        temp: data.list[dayIndices[i]].main.temp,
+        wind: data.list[dayIndices[i]].wind.speed,
+        humid: data.list[dayIndices[i]].main.humidity
+
       });
     }
 

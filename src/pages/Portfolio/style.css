@@ -50,15 +50,17 @@
   z-index: 10;
   position: fixed;
   top: 50%;
-  background: var(--black);
+  background: var(--turq);
 }
 
 .slider-button-left {
   left: .5rem;
+  border: 1px solid var(--highmid) !important;
 }
 
 .slider-button-right {
   right: .5rem;
+  border: 1px solid var(--highmid) !important;
 }
 
 .project-container {
