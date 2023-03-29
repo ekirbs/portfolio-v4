@@ -73,6 +73,16 @@ const NavComponent = ({ currentPage, handlePageChange }) => { // this is doublin
                 </Nav.Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
+              <NavDropdown.Item>
+                <Nav.Link
+                  href="#map"
+                  onClick={() => handlePageChange('Map')}
+                  className={currentPage === 'Map' ? 'nav-link active' : 'nav-link'}
+                >
+                  Google Maps
+                </Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
               <NavDropdown.Item href="#">
                 more to come...
               </NavDropdown.Item>

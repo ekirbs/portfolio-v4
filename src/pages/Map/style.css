@@ -1,0 +1,31 @@
+.map-card {
+  margin: 5vw 10vw;
+  background: var(--white);
+  border-radius: 4vh;
+  box-shadow: 1px 1px 4px var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 75vh
+}
+
+.map-card-heading {
+  background: var(--turq);
+  min-height: 10vh;
+  font-size: 5vh;
+  color: var(--highdark);
+  padding: 2vw;
+  border-radius: 4vh 4vh 0 0;
+  border: 2px solid var(--highdark);
+  text-shadow: 2px 2px 4px var(--white);
+  text-align: center;
+}
+
+.mapForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapInput {
+  margin: 1vh
+}
