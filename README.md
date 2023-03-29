@@ -75,6 +75,8 @@ Link: [Lofify](https://github.com/rahulpal16/lofify 'A web music player to liste
 
 Link: [React Weather App](https://github.com/alexkowsik/react-weather-app 'A Weather Forecast App using the OpenWeatherMap API.') - Weather Forecast by alexkowsik
 
+Link: [React Google Maps API](https://www.npmjs.com/package/@react-google-maps/api 'A google maps package using the Google Maps API.') - Google Maps by JustFly1984
+
 <br>
 
 ---
@@ -107,4 +109,5 @@ This application has an MIT license.  This is a short and simple permissive lice
 - Fun Stuff:
   - Music Player - listen to some tunes
   - Weather Forecast Finder - find weather in a city
+  - Google Maps - interact with google's world map and search for a location
   - more to come! - google maps, games, direct contact option, and more
