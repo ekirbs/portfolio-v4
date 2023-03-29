@@ -3,7 +3,7 @@
 ---
 >## Description
 
-Hello, and welcome to my portfolio!  My name is Eric Kirberger and I am a Full Stack Web Developer.  My focus is on Front End Development and UI/UX Design.  This mobile-first portfolio is made using React.js with a growing number of components and features, a list of which can be found below.  Please enjoy your time on my site, and feel free to contact me for anything field-related!
+Hello, and welcome to my portfolio!  My name is Eric Kirberger and I am a Full Stack Web Developer.  My focus is on Front End Development and UI/UX Design.  This mobile-first, responsive portfolio is made using React.js with a growing number of components and features, a list of which can be found below.  Please enjoy your time on my site, and feel free to contact me for anything field-related!
 
 Link: [Deployed Portfolio](https://ekirbs.github.io/portfolio-v4/ 'My deployed portfolio, made using React.js.')
 
@@ -44,19 +44,14 @@ Lastly, the Footer has links to my different professional accounts including: Li
 
 <br>
 
-  ### Current Fun Stuff:
+### ***Current Fun Stuff:***
 
-  **Music Player** - A web music player to listen to chill lofi songs.  The song list is subject to change.
-  
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
-  **Weather Forecast** - A Weather Forecast App using the OpenWeatherMap API.  Search for any city and get a 5-day forecast of the weather.  The information given is subject to change.
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+| Title            | Description | Image                                                                   |
+| :--------------- | :---------: | ----------------------------------------------------------------------: |
+| Music Player     | A web music player app to listen to chill lofi songs.  The song list is subject to change. | <img src="./public/assets/images/music-player-img.jpg" width="50%">     |
+| Weather Forecast | A weather forecast app using the OpenWeatherMap API.  Search for any city and get a 5-day forecast of the weather.  The information given is subject to change. | <img src="./public/assets/images/weather-forecast-img.jpg" width="50%"> |
+| Google Maps      | A Google global map app using the Google Maps API.  The map display is fully touch-capable.  Search for any location and the map will pinpoint the location.  The functionality is subject to change. | <img src="./public/assets/images/google-maps-img.jpg" width="50%">      |
+<br>
 
 ![Tutorial GIF.](./public/assets/images/tutor-gif.gif)
 
@@ -67,7 +62,7 @@ Lastly, the Footer has links to my different professional accounts including: Li
 ---
 >## Credits
 
-A special thanks to the developers of the components I've utilized on this site:
+A special thanks to the developers of the packages and components I've utilized on this site:
 
 Link: [React Touch Drag Slider](https://www.npmjs.com/package/react-touch-drag-slider 'Touch and drag slider carousel component for React.') - Mobile Carousel by bushblade
 
