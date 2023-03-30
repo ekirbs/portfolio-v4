@@ -1,11 +1,7 @@
 .weather-main {
   position: relative;
-  /* top: 15vh; */
-  /* top: -25px; */
   height: 115vh;
-  /* height: 480px; */
   width: 90vw;
-  /* width: 980px; */
   border-radius: 3vh;
   display: flex;
   flex-direction: column;
@@ -13,13 +9,12 @@
   align-items: center;
   position: relative;
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 10px silver;
+  box-shadow: 0px 0px 10px var(--silver);
   margin: 2vh 0;
 }
 
 .inner-main {
   width: 90vw;
-  /* width: 800px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,27 +25,22 @@
   padding: 0px 0px 5px 0px;
   position: relative;
   transition: all 0.5s ease-out;
-  color: #113555;
+  color: var(--weatherBlue);
 }
 
 .inner-main > img {
   position: relative;
   left: 0;
-  /* left: -80px; */
   top: 5vh;
-  /* top: 90px; */
   width: 50vw;
-  /* width: 300px; */
   transition: visibility 2s ease-out;
 }
 
 .today {
   position: relative;
   width: 80vw;
-  /* width: 350px; */
   left: 5vw;
   top: 10vh;
-  /* top: 90px; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -58,17 +48,14 @@
 }
 
 .today > h1 {
-  margin-bottom: 15px;
+  margin-bottom: 2vh;
 }
 
 .weather-title {
   position: absolute;
-  top: -10px;
-  color: #365a7a;
+  color: var(--weatherTitle);
   font-size: medium;
-  /* font-size: 4rem; */
   width: 80vw;
-  /* width: 800px; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -79,15 +66,9 @@
   background: url('../images/02d.png') no-repeat;
   background-size: 100%;
   width: 50vw;
-  /* width: 250px; */
   height: 50vh;
-  /* height: 250px; */
   display: block;
 }
-
-/* @media screen and (min-width: 500px) {
-  
-} */
 
 .weather-main.city-selected + .App-header {
   --is-city-selected: 1;
@@ -95,4 +76,44 @@
 
 .weather-main + .App-header {
   --is-city-selected: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .weather-main {
+    /* top: 15vh; */
+    top: -25px;
+    height: 480px;
+    width: 980px;
+    border-radius: 30px;
+  }
+
+  .inner-main {
+    width: 800px;
+  }
+
+  .inner-main > img {
+    left: -80px;
+    top: 90px;
+    width: 300px;
+  }
+
+  .today {
+    width: 350px;
+    top: 90px;
+  }
+
+  .today > h1 {
+    margin-bottom: 15px;
+  }
+
+  .weather-title {
+    top: -10px;
+    font-size: 4rem;
+    width: 800px;
+  }
+
+  .weather-title:before {
+    width: 250px;
+    height: 250px;
+  }
 }
