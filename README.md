@@ -62,7 +62,7 @@ Lastly, the Footer has links to my different professional accounts including: Li
 ---
 >## Credits
 
-A special thanks to the developers of the packages and components I've utilized on this site:
+A special thanks to the developers of the components I've utilized on this site:
 
 Link: [React Touch Drag Slider](https://www.npmjs.com/package/react-touch-drag-slider 'Touch and drag slider carousel component for React.') - Mobile Carousel by bushblade
 

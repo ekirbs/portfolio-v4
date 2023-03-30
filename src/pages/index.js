@@ -1,4 +1,4 @@
-export { default as Home } from "./Home";
+export { default as Home } from "./Home/indexWordAni2";
 export { default as Portfolio } from "./Portfolio";
 export { default as Resume } from "./Resume";
 export { default as LoFi } from "./LoFi";
