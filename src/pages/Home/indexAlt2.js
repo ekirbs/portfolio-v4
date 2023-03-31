@@ -1,42 +1,64 @@
 import React, { useState, useEffect } from 'react';
+
 import './styleAlt.css';
 
 const words = [
-  'web devElopment',
+  '  web devElopment',
   'hardworKing',
-  'responsIve design',
-  'cReative',
-  'moBile minded',
-  'profesSional',
+  '   responsIve design',
+  '     cReative',
+  '      moBile minded',
+  ' profesSional',
 ];
+
+const capitalizedLetters = ['E', 'K', 'I', 'R', 'B', 'S'];
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isWordsVisible, setIsWordsVisible] = useState(false);
-  const [isRedAnimating, setIsRedAnimating] = useState(false);
+  const [isVisible, setIsVisible] = useState(Array(words.length).fill(false));
+  const [isRed, setIsRed] = useState(Array(words.length).fill(false));
 
   useEffect(() => {
     const wordTimer = setInterval(() => {
       setActiveIndex((activeIndex) => (activeIndex + 1) % words.length);
     }, 1000);
 
-    setTimeout(() => {
-      setIsWordsVisible(true);
-    }, 1000);
-
     return () => {
       clearInterval(wordTimer);
     };
-  }, []);
+  }, [words]);
 
   useEffect(() => {
-    if (isWordsVisible && !isRedAnimating && activeIndex === words.length - 1) {
-      setIsRedAnimating(true);
-      setTimeout(() => {
-        setIsRedAnimating(false);
-      }, 1000);
-    }
-  }, [isWordsVisible, activeIndex, isRedAnimating]);
+    const timer = setTimeout(() => {
+      setIsVisible((prev) => {
+        const newState = [...prev];
+        newState[activeIndex] = true;
+        return newState;
+      });
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [activeIndex]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsRed((prev) => {
+        const newState = [...prev];
+        for (let i = 0; i < words.length; i++) {
+          if (words[i][capitalizedLetters[i]] === capitalizedLetters[i]) {
+            newState[i] = true;
+          }
+        }
+        return newState;
+      });
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isVisible]);
 
   return (
     <div className='home-card'>
@@ -51,24 +73,13 @@ export default function About() {
           <div
             key={word}
             style={{
-              opacity: isWordsVisible ? 1 : 0,
+              opacity: isVisible[index] ? 1 : 0,
               transition: 'opacity 1s ease-in-out',
+              color: isRed[index] ? 'red' : 'inherit',
+              transitionDelay: '1s',
             }}
           >
-            {word.split('').map((letter, letterIndex) => (
-              <span
-                key={letterIndex}
-                style={{
-                  color:
-                    isRedAnimating && letterIndex === word.indexOf('E')
-                      ? 'red'
-                      : 'black',
-                  transition: isRedAnimating ? 'color 1s ease-in-out' : '',
-                }}
-              >
-                {letter}
-              </span>
-            ))}
+            {word}
           </div>
         ))}
       </div>
@@ -78,6 +89,7 @@ export default function About() {
 
 
 // import React, { useState, useEffect } from 'react';
+
 // import './styleAlt.css';
 
 // const words = [
@@ -91,16 +103,12 @@ export default function About() {
 
 // export default function About() {
 //   const [activeIndex, setActiveIndex] = useState(0);
-//   const [isWordsVisible, setIsWordsVisible] = useState(false);
-//   const [isRedAnimating, setIsRedAnimating] = useState(false);
+//   const [isVisible, setIsVisible] = useState(Array(words.length).fill(false));
+//   const [isRed, setIsRed] = useState(Array(words.reduce((acc, word) => acc + (word.match(/[A-Z]/g) || []).length, 0)).fill(false));
 
 //   useEffect(() => {
 //     const wordTimer = setInterval(() => {
 //       setActiveIndex((activeIndex) => (activeIndex + 1) % words.length);
-//     }, 1000);
-
-//     setTimeout(() => {
-//       setIsWordsVisible(true);
 //     }, 1000);
 
 //     return () => {
@@ -109,13 +117,22 @@ export default function About() {
 //   }, [words]);
 
 //   useEffect(() => {
-//     if (isWordsVisible && !isRedAnimating) {
-//       setIsRedAnimating(true);
-//       setTimeout(() => {
-//         setIsRedAnimating(false);
-//       }, 1000);
-//     }
-//   }, [isWordsVisible]);
+//     const visibleTimer = setTimeout(() => {
+//       setIsRed(Array(words.reduce((acc, word) => acc + (word.match(/[A-Z]/g) || []).length, 0)).fill(true));
+//     }, 1000);
+
+//     return () => {
+//       clearTimeout(visibleTimer);
+//     };
+//   }, [isVisible]);
+
+//   useEffect(() => {
+//     setIsVisible((prev) => {
+//       const newState = [...prev];
+//       newState[activeIndex] = true;
+//       return newState;
+//     });
+//   }, [activeIndex]);
 
 //   return (
 //     <div className='home-card'>
@@ -130,25 +147,24 @@ export default function About() {
 //           <div
 //             key={word}
 //             style={{
-//               opacity: isWordsVisible ? 1 : 0,
+//               opacity: isVisible[index] ? 1 : 0,
 //               transition: 'opacity 1s ease-in-out',
 //             }}
 //           >
-//             <span
-//               style={{
-//                 color: isRedAnimating && index === activeIndex ? 'red' : 'black',
-//                 transition: isRedAnimating ? 'color 1s ease-in-out' : '',
-//               }}
-//             >
-//               {word.split('').map((char, i) => (
+//             {word.split('').map((char, charIndex) => {
+//               const isCharRed = char.match(/[A-Z]/) && isRed.filter((val, i) => i < isRed.length - 1 && word.slice(0, charIndex).match(/[A-Z]/g)?.includes(word[i])).includes(true);
+//               return (
 //                 <span
-//                   key={i}
-//                   style={{ color: i === 0 ? 'black' : 'inherit' }}
+//                   key={`${charIndex}-${word}`}
+//                   style={{
+//                     color: isCharRed ? 'red' : undefined,
+//                     transition: isCharRed ? 'color 1s ease-in-out' : undefined,
+//                   }}
 //                 >
 //                   {char}
 //                 </span>
-//               ))}
-//             </span>
+//               );
+//             })}
 //           </div>
 //         ))}
 //       </div>
@@ -158,6 +174,7 @@ export default function About() {
 
 
 // import React, { useState, useEffect } from 'react';
+
 // import './styleAlt.css';
 
 // const words = [
@@ -169,21 +186,16 @@ export default function About() {
 //   'profesSional',
 // ];
 
-// const capitalLetters = ['E', 'K', 'I', 'R', 'B', 'S'];
+// const redLetters = ['E', 'K', 'I', 'R', 'B', 'S'];
 
 // export default function About() {
 //   const [activeIndex, setActiveIndex] = useState(0);
-//   const [isWordsVisible, setIsWordsVisible] = useState(false);
-//   const [isRedAnimating, setIsRedAnimating] = useState(false);
-//   const [isDoneAnimating, setIsDoneAnimating] = useState(false);
+//   const [isVisible, setIsVisible] = useState(Array(words.length).fill(false));
+//   const [isRed, setIsRed] = useState(Array(words.length).fill(false));
 
 //   useEffect(() => {
 //     const wordTimer = setInterval(() => {
 //       setActiveIndex((activeIndex) => (activeIndex + 1) % words.length);
-//     }, 1000);
-
-//     setTimeout(() => {
-//       setIsWordsVisible(true);
 //     }, 1000);
 
 //     return () => {
@@ -192,13 +204,28 @@ export default function About() {
 //   }, [words]);
 
 //   useEffect(() => {
-//     if (isWordsVisible && !isDoneAnimating) {
-//       setIsDoneAnimating(true);
-//       setTimeout(() => {
-//         setIsRedAnimating(true);
-//       }, 1000);
+//     setIsVisible((prev) => {
+//       const newState = [...prev];
+//       newState[activeIndex] = true;
+//       return newState;
+//     });
+//   }, [activeIndex]);
+
+//   useEffect(() => {
+//     if (isVisible.every((val) => val)) {
+//       setIsRed((prev) => {
+//         const newState = [...prev];
+//         words[activeIndex]
+//           .split('')
+//           .forEach((char, index) => {
+//             if (redLetters.includes(char)) {
+//               newState[activeIndex * 10 + index] = true;
+//             }
+//           });
+//         return newState;
+//       });
 //     }
-//   }, [isWordsVisible, isDoneAnimating]);
+//   }, [isVisible]);
 
 //   return (
 //     <div className='home-card'>
@@ -209,24 +236,24 @@ export default function About() {
 //           alignItems: 'center',
 //         }}
 //       >
-//         {words.map((word, index) => (
+//         {words.map((word, wordIndex) => (
 //           <div
 //             key={word}
 //             style={{
-//               opacity: isWordsVisible ? 1 : 0,
+//               opacity: isVisible[wordIndex] ? 1 : 0,
 //               transition: 'opacity 1s ease-in-out',
 //             }}
 //           >
-//             <span
-//               style={{
-//                 color: isRedAnimating && capitalLetters.includes(word[0])
-//                   ? 'red'
-//                   : 'black',
-//                 transition: isRedAnimating ? 'color 1s ease-in-out' : '',
-//               }}
-//             >
-//               {word}
-//             </span>
+//             {word.split('').map((char, charIndex) => (
+//               <span
+//                 key={wordIndex * 10 + charIndex}
+//                 style={{
+//                   color: isRed[wordIndex * 10 + charIndex] ? 'red' : 'inherit',
+//                 }}
+//               >
+//                 {char}
+//               </span>
+//             ))}
 //           </div>
 //         ))}
 //       </div>
@@ -236,6 +263,7 @@ export default function About() {
 
 
 // import React, { useState, useEffect } from 'react';
+
 // import './styleAlt.css';
 
 // const words = [
@@ -249,16 +277,11 @@ export default function About() {
 
 // export default function About() {
 //   const [activeIndex, setActiveIndex] = useState(0);
-//   const [isWordsVisible, setIsWordsVisible] = useState(false);
-//   const [isRedAnimating, setIsRedAnimating] = useState(false);
+//   const [isVisible, setIsVisible] = useState(Array(words.length).fill(false));
 
 //   useEffect(() => {
 //     const wordTimer = setInterval(() => {
 //       setActiveIndex((activeIndex) => (activeIndex + 1) % words.length);
-//     }, 1000);
-
-//     setTimeout(() => {
-//       setIsWordsVisible(true);
 //     }, 1000);
 
 //     return () => {
@@ -267,13 +290,12 @@ export default function About() {
 //   }, [words]);
 
 //   useEffect(() => {
-//     if (isWordsVisible && !isRedAnimating) {
-//       setIsRedAnimating(true);
-//       setTimeout(() => {
-//         setIsRedAnimating(false);
-//       }, 1000);
-//     }
-//   }, [isWordsVisible]);
+//     setIsVisible((prev) => {
+//       const newState = [...prev];
+//       newState[activeIndex] = true;
+//       return newState;
+//     });
+//   }, [activeIndex]);
 
 //   return (
 //     <div className='home-card'>
@@ -288,9 +310,77 @@ export default function About() {
 //           <div
 //             key={word}
 //             style={{
-//               opacity: isWordsVisible ? 1 : 0,
+//               opacity: isVisible[index] ? 1 : 0,
 //               transition: 'opacity 1s ease-in-out',
-//               color: isRedAnimating && index === activeIndex ? 'red' : 'black',
+//             }}
+//           >
+//             {word}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+
+// import './styleAlt.css';
+
+// const words = [
+//   'web development',
+//   'hardworking',
+//   'responsive design',
+//   'creative',
+//   'mobile minded',
+//   'professional',
+// ];
+
+// export default function About() {
+//   const [activeIndex, setActiveIndex] = useState(0);
+
+//   useEffect(() => {
+//     const wordTimer = setInterval(() => {
+//       setActiveIndex((activeIndex) => (activeIndex + 1) % words.length);
+//     }, 1000);
+
+//     return () => {
+//       clearInterval(wordTimer);
+//     };
+//   }, [words]);
+
+//   return (
+//     <div className='home-card'>
+//       <div
+//         style={{
+//           display: 'flex',
+//           flexDirection: 'column',
+//           alignItems: 'center',
+//         }}
+//       >
+//         {words.map((word, index) => (
+//           <div
+//             key={word}
+//             style={{
+//               opacity: index === activeIndex ? 1 : 0,
+//               transition: 'opacity 1s ease-in-out',
 //             }}
 //           >
 //             {word}
@@ -369,281 +459,6 @@ export default function About() {
 //               {word[0]}
 //             </span>
 //             {word.slice(1)}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-// import React, { useState, useEffect } from 'react';
-// import './styleAlt.css';
-
-// const words = [
-//   'web devElopment',
-//   'hardworKing',
-//   'responsIve design',
-//   'cReative',
-//   'moBile minded',
-//   'profesSional',
-// ];
-
-// export default function About() {
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   const [isWordsVisible, setIsWordsVisible] = useState(false);
-//   const [isRedAnimating, setIsRedAnimating] = useState(false);
-
-//   useEffect(() => {
-//     const wordTimer = setInterval(() => {
-//       setActiveIndex((activeIndex) => (activeIndex + 1) % words.length);
-//       if (activeIndex === 0) {
-//         setTimeout(() => {
-//           setIsWordsVisible(true);
-//         }, 1000);
-//       }
-//     }, 1000);
-
-//     return () => {
-//       clearInterval(wordTimer);
-//     };
-//   }, [words]);
-
-//   useEffect(() => {
-//     if (isWordsVisible && !isRedAnimating && activeIndex === words.length - 1) {
-//       setIsRedAnimating(true);
-//       setTimeout(() => {
-//         setIsRedAnimating(false);
-//       }, 1000);
-//     }
-//   }, [isWordsVisible, isRedAnimating, activeIndex]);
-
-//   return (
-//     <div className='home-card'>
-//       <div
-//         style={{
-//           display: 'flex',
-//           flexDirection: 'column',
-//           alignItems: 'center',
-//         }}
-//       >
-//         {words.map((word, index) => (
-//           <div
-//             key={word}
-//             style={{
-//               opacity: isWordsVisible ? 1 : 0,
-//               transition: 'opacity 1s ease-in-out',
-//             }}
-//           >
-//             <span
-//               style={{
-//                 color:
-//                   isRedAnimating && index === activeIndex
-//                     ? 'red'
-//                     : index === 3 || index === 6 || index === 8 || index === 10 || index === 14 || index === 19
-//                     ? 'black'
-//                     : 'red',
-//                 transition: isRedAnimating ? 'color 1s ease-in-out' : '',
-//               }}
-//             >
-//               {word[0]}
-//             </span>
-//             {word.slice(1)}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-// import React, { useState, useEffect } from 'react';
-// import './styleAlt.css';
-
-// const words = [
-//   'web development',
-//   'hardworking',
-//   'responsive design',
-//   'creative',
-//   'mobile minded',
-//   'professional',
-// ];
-
-// export default function About() {
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   const [isWordsVisible, setIsWordsVisible] = useState(false);
-//   const [isRedAnimating, setIsRedAnimating] = useState(false);
-
-//   useEffect(() => {
-//     const wordTimer = setInterval(() => {
-//       setActiveIndex((activeIndex) => (activeIndex + 1) % words.length);
-//     }, 1000);
-
-//     setTimeout(() => {
-//       setIsWordsVisible(true);
-//     }, 1000);
-
-//     return () => {
-//       clearInterval(wordTimer);
-//     };
-//   }, [words]);
-
-//   useEffect(() => {
-//     if (isWordsVisible && !isRedAnimating) {
-//       setIsRedAnimating(true);
-//       setTimeout(() => {
-//         setIsRedAnimating(false);
-//       }, 1000);
-//     }
-//   }, [isWordsVisible]);
-
-//   return (
-//     <div className='home-card'>
-//       <div
-//         style={{
-//           display: 'flex',
-//           flexDirection: 'column',
-//           alignItems: 'center',
-//         }}
-//       >
-//         {words.map((word, index) => (
-//           <div
-//             key={word}
-//             style={{
-//               opacity: isWordsVisible ? 1 : 0,
-//               transition: 'opacity 1s ease-in-out',
-//             }}
-//           >
-//             <span
-//               style={{
-//                 color:
-//                   isRedAnimating && index === activeIndex ? 'red' : 'black',
-//                 transition: isRedAnimating ? 'color 1s ease-in-out' : '',
-//               }}
-//             >
-//               {word[0]}
-//             </span>
-//             {word.slice(1)}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-// import React, { useState, useEffect } from 'react';
-// import './styleAlt.css';
-
-// const words = [
-//   'web devElopment',
-//   'hardworKing',
-//   'responsIve design',
-//   'cReative',
-//   'moBile minded',
-//   'profesSional',
-// ];
-
-// export default function About() {
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   const [isCapitalAnimating, setIsCapitalAnimating] = useState(false);
-//   const [isWordsVisible, setIsWordsVisible] = useState(false);
-
-//   useEffect(() => {
-//     const wordTimer = setInterval(() => {
-//       setActiveIndex((activeIndex) => (activeIndex + 1) % words.length);
-//     }, 1000);
-
-//     setTimeout(() => {
-//       setIsWordsVisible(true);
-//     }, 1000);
-
-//     return () => {
-//       clearInterval(wordTimer);
-//     };
-//   }, [words]);
-
-//   useEffect(() => {
-//     if (activeIndex === words.length - 1) {
-//       setTimeout(() => {
-//         setIsCapitalAnimating(true);
-//       }, 1000);
-//     }
-//   }, [activeIndex]);
-
-//   return (
-//     <div className='home-card'>
-//       <div
-//         style={{
-//           display: 'flex',
-//           flexDirection: 'column',
-//           alignItems: 'center',
-//         }}
-//       >
-//         {words.map((word, index) => (
-//           <div
-//             key={word}
-//             style={{
-//               opacity: isWordsVisible ? 1 : 0,
-//               transition: 'opacity 1s ease-in-out',
-//             }}
-//           >
-//             <span
-//               style={{
-//                 color:
-//                   isCapitalAnimating && index === activeIndex ? 'red' : 'black',
-//                 transition: isCapitalAnimating
-//                   ? 'color 1s ease-in-out'
-//                   : '',
-//               }}
-//             >
-//               {word[0]}
-//             </span>
-//             {word.slice(1).toLowerCase()}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-//     const capitalTimer = setTimeout(() => {
-//       setIsCapitalAnimating(true);
-//     }, 6000);
-//     return () => {
-//       clearInterval(wordTimer);
-//       clearTimeout(capitalTimer);
-//     };
-//   }, [words]);
-
-//   return (
-//     <div className='home-card'>
-//       <div
-//         style={{
-//           display: 'flex',
-//           flexDirection: 'column',
-//           alignItems: 'center',
-//         }}
-//       >
-//         {words.map((word, index) => (
-//           <div
-//             key={word}
-//             style={{
-//               opacity: index === activeIndex ? 1 : 0,
-//               transition: 'opacity 1s ease-in-out',
-//             }}
-//           >
-//             <span
-//               style={{
-//                 color:
-//                   isCapitalAnimating && index === activeIndex ? 'red' : 'black',
-//                 transition: 'color 1s ease-in-out',
-//               }}
-//             >
-//               {word[0]}
-//             </span>
-//             {word.slice(1).toLowerCase()}
 //           </div>
 //         ))}
 //       </div>
