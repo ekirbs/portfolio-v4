@@ -25,3 +25,14 @@
     opacity: 1;
   }
 } */
+
+.home-card span {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.center-letter {
+  display: block;
+  margin: 0 auto;
+}
