@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
-
 import './styleAlt.css';
 
 const words = [
-  '  web devElopment',
+  'web devElopment',
   'hardworKing',
-  '   responsIve design',
-  '     cReative',
-  '      moBile minded',
-  ' profesSional',
+  'responsIve design',
+  'cReative',
+  'moBile minded',
+  'profesSional',
 ];
-
-const capitalizedLetters = ['E', 'K', 'I', 'R', 'B', 'S'];
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -29,36 +26,25 @@ export default function About() {
   }, [words]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible((prev) => {
-        const newState = [...prev];
-        newState[activeIndex] = true;
-        return newState;
-      });
+    const visibleTimer = setTimeout(() => {
+      setIsRed(words.map((word) => {
+        const capitalLetterIndex = word.split('').findIndex((char) => char === char.toUpperCase() && char.match(/[A-Z]/));
+        return capitalLetterIndex !== -1;
+      }));
     }, 1000);
 
     return () => {
-      clearTimeout(timer);
-    };
-  }, [activeIndex]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsRed((prev) => {
-        const newState = [...prev];
-        for (let i = 0; i < words.length; i++) {
-          if (words[i][capitalizedLetters[i]] === capitalizedLetters[i]) {
-            newState[i] = true;
-          }
-        }
-        return newState;
-      });
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
+      clearTimeout(visibleTimer);
     };
   }, [isVisible]);
+
+  useEffect(() => {
+    setIsVisible((prev) => {
+      const newState = [...prev];
+      newState[activeIndex] = true;
+      return newState;
+    });
+  }, [activeIndex]);
 
   return (
     <div className='home-card'>
@@ -75,17 +61,209 @@ export default function About() {
             style={{
               opacity: isVisible[index] ? 1 : 0,
               transition: 'opacity 1s ease-in-out',
-              color: isRed[index] ? 'red' : 'inherit',
-              transitionDelay: '1s',
             }}
           >
-            {word}
+            {word.split('').map((char, charIndex) => {
+              const isCharRed = isRed[index] && char.match(/[A-Z]/) && charIndex === word.split('').findIndex((char) => char === char.toUpperCase() && char.match(/[A-Z]/));
+              return (
+                <span
+                  key={`${charIndex}-${word}`}
+                  style={{
+                    color: isCharRed ? 'red' : undefined,
+                    transition: isCharRed ? 'color 1s ease-in-out' : undefined,
+                  }}
+                >
+                  {char}
+                </span>
+              );
+            })}
           </div>
         ))}
       </div>
     </div>
   );
 }
+
+
+// import React, { useState, useEffect } from 'react';
+
+// import './styleAlt.css';
+
+// const words = [
+//   'web devElopment',
+//   'hardworKing',
+//   'responsIve design',
+//   'cReative',
+//   'moBile minded',
+//   'profesSional',
+// ];
+
+// export default function About() {
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const [isVisible, setIsVisible] = useState(Array(words.length).fill(false));
+//   const [isRed, setIsRed] = useState(Array(words.reduce((acc, word) => acc + (word.match(/[A-Z]/g) || []).length, 0)).fill(false));
+
+//   useEffect(() => {
+//     const wordTimer = setInterval(() => {
+//       setActiveIndex((activeIndex) => (activeIndex + 1) % words.length);
+//     }, 1000);
+
+//     return () => {
+//       clearInterval(wordTimer);
+//     };
+//   }, [words]);
+
+//   useEffect(() => {
+//     const visibleTimer = setTimeout(() => {
+//       setIsRed(isRed.map((val, index) => {
+//         if (words[index].match(/[A-Z]/)) {
+//           return true;
+//         } else {
+//           return val;
+//         }
+//       }));
+//     }, 2000);
+
+//     return () => {
+//       clearTimeout(visibleTimer);
+//     };
+//   }, [isVisible]);
+
+//   useEffect(() => {
+//     setIsVisible((prev) => {
+//       const newState = [...prev];
+//       newState[activeIndex] = true;
+//       return newState;
+//     });
+//   }, [activeIndex]);
+
+//   return (
+//     <div className='home-card'>
+//       <div
+//         style={{
+//           display: 'flex',
+//           flexDirection: 'column',
+//           alignItems: 'center',
+//         }}
+//       >
+//         {words.map((word, index) => (
+//           <div
+//             key={word}
+//             style={{
+//               opacity: isVisible[index] ? 1 : 0,
+//               transition: 'opacity 1s ease-in-out',
+//             }}
+//           >
+//             {word.split('').map((char, charIndex) => {
+//               const isCharRed = char.match(/[A-Z]/) && isRed[index];
+//               return (
+//                 <span
+//                   key={`${charIndex}-${word}`}
+//                   style={{
+//                     color: isCharRed ? 'red' : undefined,
+//                     transition: isCharRed ? 'color 1s ease-in-out' : undefined,
+//                   }}
+//                 >
+//                   {char}
+//                 </span>
+//               );
+//             })}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+
+// import React, { useState, useEffect } from 'react';
+
+// import './styleAlt.css';
+
+// const words = [
+//   '  web devElopment',
+//   'hardworKing',
+//   '   responsIve design',
+//   '     cReative',
+//   '      moBile minded',
+//   ' profesSional',
+// ];
+
+// const capitalizedLetters = ['E', 'K', 'I', 'R', 'B', 'S'];
+
+// export default function About() {
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const [isVisible, setIsVisible] = useState(Array(words.length).fill(false));
+//   const [isRed, setIsRed] = useState(Array(words.length).fill(false));
+
+//   useEffect(() => {
+//     const wordTimer = setInterval(() => {
+//       setActiveIndex((activeIndex) => (activeIndex + 1) % words.length);
+//     }, 1000);
+
+//     return () => {
+//       clearInterval(wordTimer);
+//     };
+//   }, [words]);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setIsVisible((prev) => {
+//         const newState = [...prev];
+//         newState[activeIndex] = true;
+//         return newState;
+//       });
+//     }, 1000);
+
+//     return () => {
+//       clearTimeout(timer);
+//     };
+//   }, [activeIndex]);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setIsRed((prev) => {
+//         const newState = [...prev];
+//         for (let i = 0; i < words.length; i++) {
+//           if (words[i][capitalizedLetters[i]] === capitalizedLetters[i]) {
+//             newState[i] = true;
+//           }
+//         }
+//         return newState;
+//       });
+//     }, 2000);
+
+//     return () => {
+//       clearTimeout(timer);
+//     };
+//   }, [isVisible]);
+
+//   return (
+//     <div className='home-card'>
+//       <div
+//         style={{
+//           display: 'flex',
+//           flexDirection: 'column',
+//           alignItems: 'center',
+//         }}
+//       >
+//         {words.map((word, index) => (
+//           <div
+//             key={word}
+//             style={{
+//               opacity: isVisible[index] ? 1 : 0,
+//               transition: 'opacity 1s ease-in-out',
+//               color: isRed[index] ? 'red' : 'inherit',
+//               transitionDelay: '1s',
+//             }}
+//           >
+//             {word}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
 
 
 // import React, { useState, useEffect } from 'react';
