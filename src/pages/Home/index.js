@@ -1,31 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 
-import { placeholder, thinkingRobot } from "./images";
-import "./style.css";
+import "./styleAlt.css";
+import "animate.css";
 
-export default function About({ handlePageChange }) {
+const words = [
+  "web devElopment",
+  "hardworKing",
+  "responsIve design",
+  "cReative",
+  "moBile minded",
+  "profesSional",
+];
+
+function About() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((currentIndex) => (currentIndex + 1) % words.length);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentWord = words[currentIndex];
+
   return (
-    <>
-      <Container className="home-card">
-        {/* <Row>
-          <Col xs={0} md={6}></Col>
-          <Col xs={12} md={6}>
-            <p className="home-card-content">Hi. My name is Eric Kirberger and I am a Full Stack Web Developer interested in designing and building responsive web applications with intuitive user experiences. Please enjoy my website!</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <a
-              href="#contact"
-              onClick={() => handlePageChange('Contact')}
-              className="contact-link"
-            >
-              <img src={thinkingRobot} alt="Thinking robot."></img>
-            </a>
-          </Col>
-        </Row> */}
-      </Container>
-    </>
+    <div className="aniContainer">
+      {words.map((word, index) => {
+        const isOdd = (currentIndex % 2 !== 0 && currentIndex > index) || (currentIndex % 2 === 0 && currentIndex >= index);
+        return (
+          <div
+            key={word}
+            className={`animate_animated ${
+              isOdd ? "bounceInLeft" : "bounceInRight"
+            }${currentIndex === index ? " opacity-1" : ""} ${currentWord === word ? "center" : ""}`}
+            style={{ animationDelay: `${index}s` }}
+          >
+            {word}
+          </div>
+        );
+      })}
+    </div>
   );
 }
+
+export default About;

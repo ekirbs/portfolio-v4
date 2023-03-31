@@ -1,0 +1,27 @@
+.home-card {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5vh;
+  color: var(--white);
+  margin: 5vh;
+  border-radius: 5%;
+}
+
+/* .home-card h6 {
+  color: white;
+  animation: home-word-appear infinite 20s linear
+} */
+
+/* @keyframes home-word-appear {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(369deg);
+    opacity: 1;
+  }
+} */
