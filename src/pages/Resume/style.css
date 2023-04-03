@@ -66,8 +66,17 @@
   .resume-card-heading {
     text-align: center;
   }
+
+  .resume-content {
+    padding: 2vh;
+  }
 }
 
 .resume-title {
   text-decoration: underline;
+  text-align: center;
+}
+
+.resume-prof-list {
+  padding: 2vw 0 2vw 8vw;
 }

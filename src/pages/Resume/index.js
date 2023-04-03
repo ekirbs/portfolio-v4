@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="resume-top-content">
         <Col>
           <h2 className="resume-title">My Proficiencies:</h2>
-          <ul>
+          <ul className="resume-prof-list">
             <li>React.js</li>
             <li>Express.js</li>
             <li>MongoDB</li>
@@ -35,12 +35,12 @@ export default function Contact() {
       <div className="resume-section-card">
         <Col>
           <h3 className="resume-title">Summary</h3>
-          <p>
+          <p className="resume-content">
             I am a Web Developer and graduate of the Rutgers University
             Full-Stack Web Development Program. I excel at front-end development
             using technologies like React.js, Node.js, and more.
           </p>
-          <p>
+          <p className="resume-content">
             My background in education and coaching means I have a strong
             understanding of teamwork, management, communication, conflict
             resolution, and creative problem solving.
@@ -50,7 +50,7 @@ export default function Contact() {
       <div className="resume-section-card">
         <Col>
           <h3 className="resume-title">Experience</h3>
-          <Row>
+          {/* <Row>
             <Col>
               <p>
                 Full-Stack Web Developer
@@ -61,8 +61,8 @@ export default function Contact() {
                 Rutgers Full--Stack Web Development Program, Nov '22 - Feb '23
               </p>
             </Col>
-          </Row>
-          <Row>
+          </Row> */}
+          <Row className="resume-content">
             <Col>
               <p>
                 Report Administrator, QA/QC Administator
@@ -74,7 +74,7 @@ export default function Contact() {
               </p>
             </Col>
           </Row>
-          <Row>
+          <Row className="resume-content">
             <Col>
               <p>
                 Head Instructor, Co-Founder
@@ -86,7 +86,7 @@ export default function Contact() {
               </p>
             </Col>
           </Row>
-          <Row>
+          <Row className="resume-content">
             <Col>
               <p>
                 Substitute Teacher
@@ -103,7 +103,7 @@ export default function Contact() {
       <div className="resume-section-card">
         <Col>
           <h3 className="resume-title">Education</h3>
-          <Row>
+          <Row className="resume-content">
             <Col>
               <p>
                 Full-Stack Web Development Certificate
@@ -111,11 +111,11 @@ export default function Contact() {
             </Col>
             <Col>
               <p>
-                Rutgers University Full-Stack Web Development Program, Feb '23
+                Rutgers University Full-Stack Web Development Program
               </p>
             </Col>
           </Row>
-          <Row>
+          <Row className="resume-content">
             <Col>
               <p>
                 New Jersey State Teaching Certificate of Eligibility
@@ -123,11 +123,11 @@ export default function Contact() {
             </Col>
             <Col>
               <p>
-                Rutgers University, May '17
+                Rutgers University
               </p>
             </Col>
           </Row>
-          <Row>
+          <Row className="resume-content">
             <Col>
               <p>
                 Bachelor's Degree in Philosophy
@@ -135,11 +135,11 @@ export default function Contact() {
             </Col>
             <Col>
               <p>
-                Rutgers University, May '14
+                Rutgers University
               </p>
             </Col>
           </Row>
-          <Row>
+          <Row className="resume-content">
             <Col>
               <p>
                 Associate Degree
@@ -147,7 +147,7 @@ export default function Contact() {
             </Col>
             <Col>
               <p>
-                County College of Morris, '07
+                County College of Morris
               </p>
             </Col>
           </Row>

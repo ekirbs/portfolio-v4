@@ -57,12 +57,13 @@
   width: 1.1em;
 }
 
-@media screen and (max-width: 500px) {
-  /* .word-div {
-    font-size: 400%;
-  } */
+.word-div span {
+  font-size: 200%;
+}
+
+/* @media screen and (max-width: 500px) {
 
   .word-div span {
     font-size: 200%;
   }
-}
+} */
