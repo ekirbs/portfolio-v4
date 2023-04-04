@@ -13,7 +13,7 @@
   box-shadow: 1px 1px 4px var(--white);
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 75vh;
 }
 
 .portfolio-card-heading {
@@ -79,7 +79,7 @@
 
 @media screen and (max-width: 500px) {
   .portfolio-card {
-    height: 74vh;
+    height: 80vh;
   }
 }
 
