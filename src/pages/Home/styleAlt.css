@@ -1,12 +1,11 @@
 .home-card {
-  height: 70vh;
+  height: 76vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 5vh;
   color: var(--white);
-  margin: 5vh;
+  margin: 2vh;
   border-radius: 5%;
 }
 
@@ -57,8 +56,13 @@
   width: 1.1em;
 }
 
+.word-div {
+  width: 100%;
+  display: flex;
+}
+
 .word-div span {
-  font-size: 200%;
+  font-size: 300%;
 }
 
 /* @media screen and (max-width: 500px) {
@@ -67,3 +71,7 @@
     font-size: 200%;
   }
 } */
+
+.is-red {
+  align-items: center;
+}

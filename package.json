@@ -28,7 +28,8 @@
     "react-scripts": "5.0.1",
     "react-spring": "^9.6.1",
     "react-touch-drag-slider": "^2.2.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "predeploy": "npm run build",

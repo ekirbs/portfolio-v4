@@ -1,6 +1,6 @@
 /* .weather-card {
   height: 225vh;
-  width: 85vw;
+  width: 90vw;
 } */
 
 .weather-card-content {
@@ -27,8 +27,8 @@
   color: white;
 }
 
-@media screen and (min-width: 800px) {
+/* @media screen and (min-width: 800px) {
   .App-header {
     min-height: 100vh;
   }
-}
+} */

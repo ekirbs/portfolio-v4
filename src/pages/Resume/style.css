@@ -30,6 +30,7 @@
   width: auto;
   opacity: 75%;
   transition: transform 0.2s;
+  border: 1px solid var(--turq);
 }
 
 .resume-img:hover {
@@ -58,7 +59,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 770px) {
   .resume-top-content {
     flex-direction: column;
   }

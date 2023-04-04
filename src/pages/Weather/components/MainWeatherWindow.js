@@ -8,7 +8,8 @@ export default class MainWeatherWindow extends React.Component {
     return (
       <div
         style={{
-          height: this.props.city ? '105vh' : '75vh',
+          height: this.props.city ? '125vh' : '75vh',
+          width: "90vw",
         }}
         className='weather-main'
       >

@@ -1,15 +1,15 @@
 import React from "react";
-
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
-
 import { robotHead } from "./images";
-
 import "./style.css";
 
 const NavComponent = ({ currentPage, handlePageChange }) => { // this is doubling up on links, I have both a manual system and bootstrap links in place.
+  const expandBreakPoint = '1100px';
+
   return (
     <Navbar
       collapseOnSelect
+      // expand={window.innerWidth >= expandBreakPoint ? "lg" : false} // check window width and set expand accordingly
       expand="lg"
       sticky="top"
       className="nav-card"

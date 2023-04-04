@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
-import { resumeBtn, resume } from "./images";
+import { resumeImg, resume } from "./images";
 import "./style.css";
 
 export default function Contact() {
@@ -25,10 +25,10 @@ export default function Contact() {
             <li>And More!</li>
           </ul>
         </Col>
-        <Col xs={12} md={3} className="resume-download-card">
-          <p>Click on the R to download my full resume!</p>
+        <Col className="resume-download-card">
+          <p>Click on the image to download my full resume!</p>
           <a href={resume} download>
-            <img src={resumeBtn} alt="My resume." className="resume-img"></img>
+            <img src={resumeImg} alt="My resume." className="resume-img"></img>
           </a>
         </Col>
       </div>
