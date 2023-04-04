@@ -110,7 +110,7 @@
 @media screen and (min-width: 1100px) {
   .weather-main {
     width: 980px !important;
-    height: 75vh !important;
+    height: 100vh !important;
   }
 
   .weather-title {
