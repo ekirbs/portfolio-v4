@@ -22,6 +22,15 @@ export default class CityInput extends React.Component {
     };
 
     const style = {
+      top: this.props.city ? 0: '100px',
+      // "@media screen and (maxWidth: 1100px)": {
+      //   top: this.props.city ? "-25vh" : "15vh",
+      // },
+      // "@media screen and (minWidth: 1100px)": {
+      //   top: this.props.city ? "-10vh" : "0",
+      // },
+      // top: this.props.city ? "5%" : "auto",
+      // bottom: this.props.city ? "auto" : "5%",
       top: this.props.city ? '-25vh' : '15vh',
       // top: this.props.city ? '-380px' : '-20px',
       width: '80%',

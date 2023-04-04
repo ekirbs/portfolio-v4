@@ -1,6 +1,6 @@
 .weather-main {
   position: relative;
-  height: 200vh;
+  /* height: 200vh; */
   width: 90vw;
   border-radius: 3vh;
   display: flex;
@@ -110,6 +110,7 @@
 @media screen and (min-width: 1100px) {
   .weather-main {
     width: 980px !important;
+    height: 75vh !important;
   }
 
   .weather-title {
