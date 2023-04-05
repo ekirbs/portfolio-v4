@@ -124,6 +124,7 @@ export default function About() {
                   style={{
                     fontFamily: 'Alegreya Sans SC',
                     color: isCharRed ? "red" : "white",
+                    // fontSize: isCharEnlarged ? "12vh" : undefined,
                     fontSize: isCharEnlarged ? "350%" : undefined,
                     textShadow: isCharShadowed ? "2px 2px 4px var(--white)" : undefined,
                     transition: isCharRed

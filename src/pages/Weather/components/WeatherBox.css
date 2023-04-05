@@ -9,6 +9,14 @@
 
 .weather-box-list > li {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-box-list ul,
+.weather-box-list > li {
+  padding-left: 0 !important;
 }
 
 .weather-box {

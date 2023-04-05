@@ -58,11 +58,14 @@
 
 .word-div {
   width: 100%;
+  /* width: 95vh; */
   display: flex;
+  height: 10%;
 }
 
 .word-div span {
   font-size: 300%;
+  /* font-size: 8vh; */
 }
 
 /* @media screen and (max-width: 500px) {
